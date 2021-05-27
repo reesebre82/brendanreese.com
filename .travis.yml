@@ -8,6 +8,11 @@ addons:
     packages:
       - sshpass
 
+coveralls: true
+
+notifications:
+  email: false
+
 script:
   - npm run test
   - npm run test:coveralls
