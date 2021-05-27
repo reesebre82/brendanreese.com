@@ -15,7 +15,7 @@ notifications:
 
 script:
   - npm run test
-  - npm run test:coveralls
+  - npm run test:coverage
 
 after_success:
   - mkdir build
