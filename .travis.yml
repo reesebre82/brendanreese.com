@@ -7,10 +7,10 @@ before_script:
   - composer install --prefer-source
     - npm install
 
-  addons:
-    apt:
-        packages:
-            - sshpass
+addons:
+  apt:
+    packages:
+      - sshpass
 
 script:
 
