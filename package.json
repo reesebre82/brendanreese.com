@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "devDependencies": {
     "coveralls": "^3.1.0",
     "jest": "^27.0.1"
+  },
+  "dependencies": {
+    "coverage": "^0.4.1"
   }
 }
