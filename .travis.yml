@@ -15,7 +15,8 @@ notifications:
 
 script:
   - npm run test
-  - npm run test:coverage
+
+after_script:
   - npm run test:coveralls
 
 after_success:
