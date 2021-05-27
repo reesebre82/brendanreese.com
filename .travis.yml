@@ -6,7 +6,6 @@ node_js: node
 before_install:
 
 script:
-  - npm make test
 
 after_success:
   - export SYMFONY_ENV=prod && composer install --no-dev -o
