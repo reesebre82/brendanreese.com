@@ -12,10 +12,9 @@ script:
 
 after_success:
   - export SYMFONY_ENV=prod && composer install --no-dev -o
-  - ls
-  - mkdir newBuild
-  - mv * newBuild
+  - mkdir build
+  - mv * build
   - tar -czf package.tgz newBuild
   - export SSHPASS=$DEPLOY_PASS
   - sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-  # - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/deploy.sh
+  - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/deploy.sh
