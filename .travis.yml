@@ -3,7 +3,14 @@ sudo: false
 language: node_js
 node_js: node
 
-before_install:
+before_script:
+  - composer install --prefer-source
+    - npm install
+
+  addons:
+    apt:
+        packages:
+            - sshpass
 
 script:
 
