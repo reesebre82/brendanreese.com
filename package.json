@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "jest",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
